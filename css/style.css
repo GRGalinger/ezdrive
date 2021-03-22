@@ -1,0 +1,372 @@
+
+/* Navigation */
+ul {
+  list-style-type: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background: #4A4E69;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */       
+}
+li h2 {
+  color: white;
+  text-align: center;
+
+}
+li a {
+  display: block; 
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background: #22223B;
+  color: white;
+}
+.btn-bottom button {
+  margin-top: 600px;
+  margin-left: 33%;
+  border-radius: 12px;
+  padding: 8px 20px;
+  font-family: "Courier";
+}
+.btn-bottom button:hover {
+  background-color: #dddee2;
+}
+
+/* Body */
+body { 
+  width:68%; 
+  margin: 0;
+  background: #EFE7E6;
+  font-family: "Courier";
+} 
+.container-home {
+  margin-left: 28%;
+  margin-top:5%;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-home .box { 
+  display:table; 
+} 
+.container-home .box .box-row { 
+  display:table-row; 
+} 
+.container-home .box .box-cell { 
+  display:table-cell; 
+} 
+
+/* Home - Account Info */
+.container-home .box .box-cell.account-info { 
+  padding: 10px; 
+  background:white; 
+  color:black; 
+  text-align:justify; 
+  width:350px;
+} 
+.container-home .box .box-cell.account-info button{ 
+  font-family: "Courier";
+  margin-bottom: 2px;
+} 
+
+/* Home - Cloud Services */
+.container-home .box .box-cell.cloud-services {
+  padding: 10px; 
+  padding-left: 20px;
+  background:white; 
+  color:black; 
+  width:300px;
+  text-align:justify
+} 
+.container-home .box .box-cell.cloud-services .cloud-service {
+  margin-bottom: 50px;
+}
+.container-home .box .box-cell.cloud-services h3 {
+  display: inline-block;
+  margin: 0;
+} 
+.container-home .box .box-cell.cloud-services .cloud-service .connection-status .connected h3 {
+  color: #95D5B2;
+}
+.container-home .box .box-cell.cloud-services .cloud-service .connection-status .not-connected h3 {
+  color: #FDC85E;
+}
+/* .container-home .box .box-cell.cloud-services .btn-disconnect[type="googledrive-disconnect"], .btn-disconnect[type="dropbox-disconnect"], .btn-disconnect[type="onedrive-disconnect"] {
+  display: inline-block;
+}  */
+.container-home .box .box-cell.cloud-services .btn-connect {
+  display: inline-block;
+  margin-left: 200px;
+} 
+
+/* Home Statuses */
+.container-home .box .box-cell.statuses {
+  padding: 10px; 
+  padding-left: 20px;
+  background:white; 
+  color:black; 
+  width:200px;
+  text-align:justify;
+} 
+
+.container-home .box .box-cell.statuses input {
+  margin-bottom: 50px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family: "Courier";
+} 
+.container-home .box .box-cell.statuses input:hover {
+  background-color:#dddee2;
+}
+
+.container-home .box .box-cell.statuses button {
+  margin-bottom: 50px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family: "Courier";
+} 
+
+.container-home .box .box-cell.statuses input[type="submit"] {
+  padding: 12px 35px;
+} 
+
+.container-home .box .box-cell.statuses button[type="connect"] {
+  padding: 12px 35px;
+} 
+.container-home .box .box-cell.statuses button[type="disconnect"] {
+  padding: 8px 15px;
+  background: #EA8588;
+} 
+.container-home .box .box-cell.statuses button[type="disconnect"]:hover {
+  background-color: #e96e72;
+}
+.container-home .box .box-cell.statuses .btn-google-drive .btn-connect,
+.container-home .box .box-cell.statuses .btn-google-drive .btn-disconnect,
+.container-home .box .box-cell.statuses .btn-onedrive .btn-connect,
+.container-home .box .box-cell.statuses .btn-onedrive .btn-disconnect,
+.container-home .box .box-cell.statuses .btn-dropbox .btn-connect,
+.container-home .box .box-cell.statuses .btn-dropbox .btn-disconnect {
+  display: inline-block;
+} 
+.container-home h1 {
+  text-decoration: underline;
+}
+
+/* Home - Upload button */
+.btn-upload button{
+  margin-left:900px;
+  margin-top: 20px;
+  padding: 20px 85px;
+  border-radius: 12px;
+  background: #95D5B2;
+  font-family: "Courier";
+}
+.btn-upload button:hover {
+  background-color: #7bd3a2;;
+}
+
+/* Upload - Container  */
+.container-upload {
+  margin-left: 28%;
+  margin-top:5.0%;
+  padding: 10px; 
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-upload input[type="submit"] {
+  padding: 8px 35px;
+  border-radius: 12px;
+}
+.container-upload input[type="submit"]:hover {
+  background-color: #dddee2;
+}
+.container-upload h1 {
+  text-decoration: underline;
+}
+
+/* Login - Container  */
+.container-login, .container-signup {
+  margin-left: 61%;
+  margin-top:7.6%;
+  width: 300px;
+  height: 240px;
+  padding: 10px; 
+  background: #A0A3BB;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-signup {
+  height: 375px;
+}
+
+.container-login h2, .container-signup h2 {
+  margin-left: 50px;
+}
+
+.container-login input, .container-login button, .container-signup input, .container-signup button {
+  display: block;
+  padding: 12px 20px;
+  margin-bottom: 5px;
+}
+
+.container-login input, .container-signup input {
+  margin-left: 14.5%;
+}
+.container-login button[type="submit"], .container-signup button[type="submit"] {
+  margin-top: 20px;
+  margin-left: 105px;
+}
+
+.login-message h1, .login-message p, .signup-message h1, .signup-message p {
+  margin-top: 40px;
+  margin-left: 500px;
+  width: 1000px;
+}
+
+.text-signup p, .text-login p {
+  color: black;
+  text-decoration: underline;
+  margin-top: 50px;
+  margin-left:37%;
+}
+
+.text-login p {
+  margin-left:40%;
+}
+
+/* About- Container  */
+.container-about {
+  margin-left: 28%;
+  margin-top:5.0%;
+  width: 920px;
+  height: 1240px;
+  padding: 10px; 
+  margin-bottom: 80px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-about h1 {
+  text-decoration: underline;
+}
+
+
+/* Edit User Info - Container  */
+.container-edituserinfo {
+  margin-left: 28%;
+  margin-top:5.0%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px; 
+  background:white; 
+  color:black; 
+  text-align:justify; 
+  width:350px;
+  height: 500px;
+}
+.container-edituserinfo .info {
+  margin-bottom: 5px;
+}
+.container-edituserinfo .info input {
+  padding: 12px 20px;
+  width: 200px;
+  
+}
+.container-edituserinfo .btns-edit button {
+  padding: 12px 20px;
+}
+.container-edituserinfo h1 {
+  text-decoration: underline;
+}
+
+/* Results - Container  */
+.container-results {
+  margin-left: 28%;
+  margin-top:5.0%;
+  padding: 10px; 
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-results .box .box-cell.upload-summary .file-summary h3 {
+  color:#e96e72;
+}
+.container-results .box .box-cell.cloud-service-links {
+  padding: 10px; 
+  padding-left: 20px;
+  background: rgb(218, 137, 137); 
+  color:black; 
+  width:500px;
+  text-align:justify
+} 
+.link-images{
+  display: inline-block;
+  margin-top: 20px;
+  margin-left:380px;
+}
+.link-images a {
+  margin: 10px;
+}
+.link-images h3 {
+  margin-left: 35px;
+  text-decoration: underline;
+}
+.link-images img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-results .box { 
+  display:table; 
+} 
+.container-results .box .box-row { 
+  display:table-row; 
+} 
+.container-results .box .box-cell { 
+  display:table-cell; 
+} 
+.container-results h1{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer  */
+.container-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #A0A3BB;
+  color: white;
+  text-align: center;
+}
+
+.footer-content a {
+  display: inline-block;
+}
+
+.footer-content p{
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+span {
+  content: "\00A9";
+}
+
+
+
+
+
+

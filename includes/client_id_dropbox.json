@@ -1,0 +1,10 @@
+
+{
+    "client_id":"c7q89zzubir4x30",
+    "project_id":"",
+    "auth_uri":"",
+    "token_uri":"",
+    "client_secret":"iyyw74dodl30vpm",
+    "redirect_uri":"http://localhost/Projects/SeniorDesign/Development/includes/onedrive_oauthcallback.inc.php"
+    
+}

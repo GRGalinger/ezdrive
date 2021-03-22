@@ -1,0 +1,7 @@
+{
+    "require": {
+        "krizalys/onedrive-php-sdk": "2.7.0",
+        "kunalvarma05/dropbox-php-sdk":"0.2.1",
+        "google/apiclient": "2.9.1"
+    }
+}
