@@ -19,11 +19,13 @@ $client->setAccessType('offline');  // this allowed for refresh tokens to be use
 
 if (!isset($_GET['code'])) {
   $auth_url = $client->createAuthUrl();
-  echo $auth_url;
-  exit();
+  // echo $auth_url;
+  // exit();
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 
 } else {
+  var_dump($_GET);
+  exit();
   $client->authenticate($_GET['code']);
   $credentials = $client->getAccessToken();  // This function returns an array of credential information
 
