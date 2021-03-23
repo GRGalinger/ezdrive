@@ -49,13 +49,10 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
         ));
       } catch (Exception $exc) {
         echo $exc->getMessage() . "\n";
+        exit();
       }
     }
   }
-
-  echo "sefsef";
-  exit();
-  
 
   if (!isset($_POST["cbdropbox"]) && !isset($_POST["cbonedrive"])) {
     header("location: ../results.php");
