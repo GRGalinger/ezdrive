@@ -13,6 +13,8 @@ if (isset($_POST['googledriveconnect'])){
 if (isset($_POST['dropboxconnect'])){
     require_once 'dropbox_oauth.inc.php';
     $authUrl = $authHelper->getAuthUrl($callbackUrl);
+    echo $authUrl;
+    exit();
     header('Location: ' . filter_var($authUrl, FILTER_SANITIZE_URL));
 }
 if (isset($_POST['onedriveconnect'])){
