@@ -9,11 +9,15 @@ if (!file_exists("client_id_google_drive.json")) exit("Client secret file not fo
 $client = new Google_Client();
 $client->setAuthConfig('client_id_google_drive.json');
 $client->addScope(Google_Service_Drive::DRIVE);
+$client->setAccessType('offline');  // this allowed for refresh tokens to be used
 
 $userId = $_SESSION['userid'];
 $row = getUserCredentials($conn, $userId, "google_credentials");
 
 if ($row != false){ // A row was returned, so this user has been authenticated before and has credentials
+  echo "here";
+  exit();
+
   $client->setAccessToken($row['accessToken']); // This line is vital
 
   // Now, we check if the access token is expired
