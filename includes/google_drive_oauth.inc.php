@@ -3,7 +3,7 @@
 require_once dirname(__DIR__, 1) .'/vendor/autoload.php';
 require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
-session_start(); 
+//session_start(); 
 
 if (!file_exists("client_id_google_drive.json")) exit("Client secret file not found");
 $client = new Google_Client();
@@ -15,9 +15,6 @@ $userId = $_SESSION['userid'];
 $row = getUserCredentials($conn, $userId, "google_credentials");
 
 if ($row != false){ // A row was returned, so this user has been authenticated before and has credentials
-  echo "here";
-  exit();
-
   $client->setAccessToken($row['accessToken']); // This line is vital
 
   // Now, we check if the access token is expired
