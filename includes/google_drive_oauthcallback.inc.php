@@ -24,8 +24,8 @@ if (!isset($_GET['code'])) {
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 
 } else {
-  var_dump($_GET);
-  exit();
+  // var_dump($_GET);
+  // exit();
   $client->authenticate($_GET['code']);
   $credentials = $client->getAccessToken();  // This function returns an array of credential information
 
