@@ -321,6 +321,16 @@ function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope
     $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 
+    echo $usersId;
+    echo $accessToken;
+    echo $expires;
+    echo $scope;
+    echo $tokenType;
+    echo $created;
+    echo $refreshToken;
+    echo $serviceType;
+    exit();
+    
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
