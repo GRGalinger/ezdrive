@@ -7,7 +7,13 @@ session_start();
 
 $client = new Google_Client();
 $client->setAuthConfigFile('client_id_google_drive.json');
-$client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauthcallback.inc.php');
+
+// Local
+//$client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauthcallback.inc.php');
+
+// Production
+$client->setRedirectUri('https://ez-drive.herokuapp.com/includes/google_drive_oauthcallback.inc.php');
+
 $client->addScope(Google_Service_Drive::DRIVE); 
 $client->setAccessType('offline');  // this allowed for refresh tokens to be used
 
@@ -31,6 +37,11 @@ if (!isset($_GET['code'])) {
         "GoogleDrive"
   );
 
-  $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauth.inc.php';
+  // Local
+  //$redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauth.inc.php';
+
+  // Production
+  $redirect_uri = 'https://ez-drive.herokuapp.com/includes/google_drive_oauth.inc.php';
+
   header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
