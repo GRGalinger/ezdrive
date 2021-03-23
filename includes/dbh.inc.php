@@ -12,7 +12,6 @@ $dBUsername = "master";
 $dBPassword = "password";
 $dBName = "ezdrive";
 
-$serverName = "localhost";
 $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
 if (!$conn) {
