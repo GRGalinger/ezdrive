@@ -25,8 +25,8 @@ if (!isset($_GET['code'])) {
   $client->authenticate($_GET['code']);
   $credentials = $client->getAccessToken();  // This function returns an array of credential information
   // var_dump($_GET);
-  var_dump($credentials);
-  exit();
+  // var_dump($credentials);
+  // exit();
   
   // Now, we can add the credentials to the db
   $userId = $_SESSION['userid'];
