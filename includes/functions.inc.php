@@ -303,7 +303,7 @@ function deleteCloudServiceCredentials($conn, $usersId, $serviceType){
 }
 
 function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType) {
-    $sql = "INSERT INTO google (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
+    $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
 
@@ -316,8 +316,6 @@ function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope
     mysqli_stmt_bind_param($stmt, "isississ", $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    echo "here";
-    exit();
     //header("location: ../signup.php?error=none");
 }
 

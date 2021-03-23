@@ -42,6 +42,7 @@ if (!isset($_GET['code'])) {
         "GoogleDrive"
   );
 
+  echo "here";
   exit();
 
   // Local
