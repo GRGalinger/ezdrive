@@ -16,7 +16,7 @@ $client->setRedirectUri('https://ez-drive.herokuapp.com/includes/google_drive_oa
 
 $client->addScope(Google_Service_Drive::DRIVE); 
 $client->setAccessType('offline');  // this allowed for refresh tokens to be used
-$client->setApprovalPrompt("select_account");
+$client->setPrompt("consent");
 
 if (!isset($_GET['code'])) {
   $auth_url = $client->createAuthUrl();
