@@ -41,9 +41,6 @@ if (!isset($_GET['code'])) {
         "GoogleDrive"
   );
 
-  echo "here";
-  exit();
-
   // Local
   //$redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauth.inc.php';
 
