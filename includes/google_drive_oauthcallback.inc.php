@@ -19,6 +19,8 @@ $client->setAccessType('offline');  // this allowed for refresh tokens to be use
 
 if (!isset($_GET['code'])) {
   $auth_url = $client->createAuthUrl();
+  echo $auth_url;
+  exit();
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 
 } else {
