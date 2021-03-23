@@ -28,8 +28,8 @@ if (!isset($_GET['code'])) {
   $credentials = $client->getAccessToken();  // This function returns an array of credential information
   var_dump($_GET);
   var_dump($credentials);
-  exit();
   
+
   // Now, we can add the credentials to the db
   $userId = $_SESSION['userid'];
   insertGoogleCredentials($conn, $userId, 
@@ -41,6 +41,8 @@ if (!isset($_GET['code'])) {
         $credentials['refresh_token'],
         "GoogleDrive"
   );
+
+  exit();
 
   // Local
   //$redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauth.inc.php';
