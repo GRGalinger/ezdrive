@@ -29,6 +29,9 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
     exit;
   }
 
+  echo "sefsef";
+  exit();
+  
   // Once access token is updated, or if it wasnt expired, proceed with upload
   $drive_service = new Google_Service_Drive($client);
   $file = new Google_Service_Drive_DriveFile();
