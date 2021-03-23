@@ -57,7 +57,13 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
 }
 
 } else {  // A row was not returned, so this user has not been authenticated before
-  $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauthcallback.inc.php';
+
+  // Local
+  //$redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauthcallback.inc.php';
+
+  //Production
+  $redirect_uri = 'https://ez-drive.herokuapp.com/includes/google_drive_oauthcallback.inc.php';
+
   header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
 
