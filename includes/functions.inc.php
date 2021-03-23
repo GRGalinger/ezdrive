@@ -316,6 +316,8 @@ function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope
     }
 
     mysqli_stmt_bind_param($stmt, "isississ", $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType);
+    echo $stmt;
+    exit();
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     //header("location: ../signup.php?error=none");
