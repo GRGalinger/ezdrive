@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once dirname(__DIR__, 1) .'/vendor/autoload.php';
+require_once dirname(__DIR__, 1) .'/vendor/autoload.php'; 
 require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
 

@@ -4,7 +4,7 @@ require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
 session_start();
 
-require_once dirname(__DIR__, 1) .'/vendor/autoload.php';
+require_once dirname(__DIR__, 1) .'/vendor/autoload.php';  
 use Kunnu\Dropbox\Dropbox;
 use Kunnu\Dropbox\DropboxApp;
 use Kunnu\Dropbox\DropboxFile;
@@ -73,8 +73,11 @@ if ($row != false) {
     //DropboxAuthHelper
     $authHelper = $dropbox->getAuthHelper();
     
-    //Callback URL
-    $callbackUrl = "http://localhost/Projects/SeniorDesign/Development/includes/dropbox_oauthcallback.inc.php";
+    //local Callback URL
+    //$callbackUrl = "http://localhost/Projects/SeniorDesign/Development/includes/dropbox_oauthcallback.inc.php";
+
+    // Production 
+    $callbackUrl = "https://ez-drive.herokuapp.com/includes/dropbox_oauthcallback.inc.php";
 }
 
 

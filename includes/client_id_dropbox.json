@@ -5,6 +5,6 @@
     "auth_uri":"",
     "token_uri":"",
     "client_secret":"iyyw74dodl30vpm",
-    "redirect_uri":"http://localhost/Projects/SeniorDesign/Development/includes/onedrive_oauthcallback.inc.php"
+    "redirect_uri":"https://ez-drive.herokuapp.com/includes/dropbox_oauthcallback.inc.php"
     
 }
