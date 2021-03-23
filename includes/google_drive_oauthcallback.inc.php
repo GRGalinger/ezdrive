@@ -15,7 +15,7 @@ $client->setAuthConfigFile('client_id_google_drive.json');
 $client->setRedirectUri('https://ez-drive.herokuapp.com/includes/google_drive_oauthcallback.inc.php');
 
 $client->addScope(Google_Service_Drive::DRIVE); 
-$client->setAccessType('offline');  // this allowed for refresh tokens to be used
+//$client->setAccessType('offline');  // this allowed for refresh tokens to be used
 
 if (!isset($_GET['code'])) {
   echo "here";
