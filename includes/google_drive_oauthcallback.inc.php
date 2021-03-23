@@ -24,11 +24,12 @@ if (!isset($_GET['code'])) {
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 
 } else {
-  // var_dump($_GET);
-  // exit();
   $client->authenticate($_GET['code']);
   $credentials = $client->getAccessToken();  // This function returns an array of credential information
-
+  var_dump($_GET);
+  var_dump($credentials);
+  exit();
+  
   // Now, we can add the credentials to the db
   $userId = $_SESSION['userid'];
   insertGoogleCredentials($conn, $userId, 
