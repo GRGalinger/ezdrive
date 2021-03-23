@@ -29,15 +29,15 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
     exit;
   }
 
-  echo "sefsef";
-  exit();
-  
   // Once access token is updated, or if it wasnt expired, proceed with upload
   $drive_service = new Google_Service_Drive($client);
   $file = new Google_Service_Drive_DriveFile();
   $file->setDescription('A test document');
   $file->setMimeType('image/jpeg'); // TODO: figure out what Mime types i need to have set??
 
+  echo "sefsef";
+  exit();
+  
   // This is where we upload the files //
   $dir = new DirectoryIterator('../uploads/');
   foreach ($dir as $fileinfo) {
