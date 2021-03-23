@@ -18,6 +18,8 @@ $client->addScope(Google_Service_Drive::DRIVE);
 $client->setAccessType('offline');  // this allowed for refresh tokens to be used
 
 if (!isset($_GET['code'])) {
+  echo "here";
+  exit();
   $auth_url = $client->createAuthUrl();
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 
