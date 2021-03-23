@@ -35,9 +35,6 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
   $file->setDescription('A test document');
   $file->setMimeType('image/jpeg'); // TODO: figure out what Mime types i need to have set??
 
-  echo "sefsef";
-  exit();
-  
   // This is where we upload the files //
   $dir = new DirectoryIterator('../uploads/');
   foreach ($dir as $fileinfo) {
@@ -55,6 +52,10 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
       }
     }
   }
+
+  echo "sefsef";
+  exit();
+  
 
   if (!isset($_POST["cbdropbox"]) && !isset($_POST["cbonedrive"])) {
     header("location: ../results.php");
