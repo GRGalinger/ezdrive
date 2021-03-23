@@ -302,9 +302,8 @@ function deleteCloudServiceCredentials($conn, $usersId, $serviceType){
     exit();
 }
 
-  // this is google credentials, need to update function name
 function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType) {
-    $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
+    $sql = "INSERT INTO google (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
 
